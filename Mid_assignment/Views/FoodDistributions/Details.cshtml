@@ -1,0 +1,35 @@
+﻿@model Mid_assignment.EF.Models.FoodDistribution
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FoodDistribution</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FoodCollectionRequest.RequestId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FoodCollectionRequest.RequestId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DistributionTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DistributionTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DistributionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
